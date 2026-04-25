@@ -7,7 +7,7 @@
 
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:game_flutter/main.dart';
+import 'package:game_flutter/app/password_game_app.dart';
 
 void main() {
   testWidgets('renders the password game screen', (WidgetTester tester) async {
@@ -15,10 +15,10 @@ void main() {
 
     expect(find.text('The Password Game'), findsOneWidget);
     expect(find.text('Password'), findsOneWidget);
-    expect(find.text('Tao mat khau'), findsOneWidget);
-    expect(find.textContaining('Rule hien tai: 1/10'), findsOneWidget);
+    expect(find.text('Create password'), findsOneWidget);
+    expect(find.textContaining('Rule 1 of 16'), findsOneWidget);
     expect(
-      find.textContaining('1) Password co it nhat 5 ky tu.'),
+      find.textContaining('Rule 1: At least 5 characters'),
       findsOneWidget,
     );
   });
